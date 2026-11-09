@@ -66,7 +66,23 @@ We can't prove the post-training half, and we never will as long as the weights 
 | Opus 5.5 | 1833 |
 | Sonnet 5.5 | 1250 |
 
-A Max 20x plan apparently gets 200,000 credits per 5 hours. So if your usage feels like it's evaporating, check `tengu_amber_tally` in your own `~/.claude.json`. I'm willing to bet a few different Max users will pull different values, which would confirm Anthropic is experimenting with usage too. (Turning the flags off won't change it, by the way. It just stops the fetch and keeps the cached values.)
+According to the same flag, here are the "5-hour credits" per plan as of .287 (cache refreshed Nov 9):
+
+| Plan | 5-hour credits |
+|---|---|
+| Pro | 10,000 |
+| Team seat | 12,500 |
+| Enterprise seat | 25,000 |
+| Max 5x (now "Max") | 50,000 |
+| Max 20x | 200,000 (now "Ultra", which has no 5-hour limit at all anymore, so on .287 this row is a leftover) |
+
+At Opus 5.5's rate (1,833 credits per 1M tokens), that's roughly 5.5M tokens per 5 hours on Pro and about 27M per 5 hours on Max.
+
+Pro : Max 5x : Max 20x was exactly 1 : 5 : 20 per 5-hour window. So the old "20x" always meant the 5-hour window, not weekly capacity. The weekly side is what recently broke, and it's what everyone's panties are twisted up about right now, because it's shady AF.
+
+Now that Ultra has no 5-hour window, the weekly limit ("10x Pro") is the only brake. There are no weekly numbers in the cache at all. Those live server-side.
+
+I'm on .287 and CC is currently at .306ish, so if anyone on a current build can pull their `tengu_amber_tally`, I'm curious whether the `max_20x` row is gone or replaced with something weekly, and what these exchange rates look like for you. If they differ wildly, that would be direct evidence that Anthropic is experimenting with usage windows. And if yours differs, it's just a matter of correlating the flag to the ID/atis header. If we can correlate it, we can prove it. (Turning the flags off won't change your table, by the way. It just stops the fetch and keeps the cached values.)
 
 There's also text the model sees at the usage limit that you never do:
 
