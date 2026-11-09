@@ -1,8 +1,8 @@
 # Claude Code `tengu_` flag map (2.1.287)
 
-A one-line read of every `tengu_*` flag that Claude Code 2.1.287 actually uses, pulled straight from the binary. The full table is in [`flagmap-2026-11-09.csv`](flagmap-2026-11-09.csv), and GitHub renders it as a searchable table, so go nuts.
+This repo was built to do one thing - contain a single doc that has a one-line read of every `tengu_*` flag that Claude Code 2.1.287 uses, sourced straight from the binary. The full table is in [`flagmap-2026-11-09.csv`](flagmap-2026-11-09.csv), and GitHub renders it as a searchable table, so go nuts.
 
-This started as a follow-up to [this r/ClaudeCode thread](https://www.reddit.com/r/ClaudeCode/comments/1xr66pd/) about Opus 5.5 "nerfs" really being server-side experiments. Huge thanks to OP for the jumping-off point.
+This started as a follow-up to [this r/ClaudeCode thread](https://www.reddit.com/r/ClaudeCode/comments/1xr66pd/) about Opus 5.5 "nerfs" really being server-side experiments. Huge thanks to OP for the jumping-off point!
 
 ---
 
@@ -19,7 +19,7 @@ This started as a follow-up to [this r/ClaudeCode thread](https://www.reddit.com
 
 My setup has a plugin that keeps a copy of the composed system prompt sections and flags it when the engine sends different text than before. It's part of a base system prompt identity layer injection of my own design.
 
-I set `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1` in `settings.json` (in the `env` block) and opened a new interactive session. Same CC version before and after (2.1.287), no other changes.
+I set `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1` in `settings.json` (in the `env` block) and opened a new interactive session. I kept the same CC version before and after (2.1.287), and maden no other changes.
 
 In the new session:
 
@@ -33,28 +33,24 @@ In the new session:
 
 The opener is `tengu_ochre_wren`, the "intro_frame" arm in the code. So the flagged version is the broader "agent with judgment" framing plus a prompt-injection guard, and the fallback is the older coding-assistant framing without it. I'd been on the flagged text since at least October 9.
 
-**Don't test this with `claude -p`.** Claude will kneejerk into testing it headless and quickly pass everything, but headless runs as `sdk-cli`, a separate slot, and doesn't load the same as a normal interactive session. Always open a new terminal window and test there.
-
 ---
 
 ## What I think is going on
 
-This part is my guess. Closed weights plus closed source means there's no way to concretely prove it.
+I have been openly theorizing about this on Reddit for weeks now, but I believe that Anthropic has been applying post-training to their models -  especially Opus 5.5/Fable - and tentpoling that post-training to steer them towards different behavior/etc.
 
-I think they're applying post-training to the models and using the experiment arms to "signpost" certain sections of that post-training for the chosen model, dynamically. That's why the IDs are hitched to the model strings.
-
-What the code **does** show, plain as day:
+This experiment finally gave me some proof (what little I'll be able to gather at least, what with closed weights/source): the uniquely ID'd experiment arms are indeed "signposting" certain sections of that post-training for the chosen model dynamically. That's why the IDs are hitched to the model strings:
 
 - **`tengu_thistle_grebe`** is a subagent steer with three values: `default`, `no_nudges`, `counter_steer`. The priority order is env var, then **the per-model slot**, then GrowthBook, then a per-model floor. When it's `counter_steer`, a section called `subagent_steer_delegation` injects "## Delegating to subagents" into the prompt and logs `tengu_subagent_steer_applied`.
 - **Opus 5 has its own prompt bundle** (the `opus_5_prompt_bundle` / `opus_5_5_prompt_bundle` model capabilities). It has a section literally keyed `overcorrection`, titled "# Corrections", that tells the model not to ruminate and not to tally past errors. To me that reads as code-level signposting for **one** model family that says Anthropic was aware of that behavior in the model. That's a training artifact they're patching with system-prompt text. `tengu_fennel_godwit` is the kill switch for the whole bundle.
 - **`tengu_heron_brook`** is the brittle-AF "don't make copies of games lol" rule they added a couple of weeks back. It lives in the same per-model slot as the experiment ID, and the Opus 5 "reduced delegation" section checks heron_brook's text before deciding whether to fire. Same system.
 - There's a **"bash-first" steering group** assigned per model and per cohort: `tengu_cozy_teapot` (strict/relaxed), `tengu_gorse_plover`, `tengu_willow_tern`, and `tengu_thrifty_sonic`.
 
-We can't prove the post-training half, and we never will as long as the weights and source stay closed. But the steering is right there in the code.
+We can't prove the post-training half, and we never will be able to as long as the weights and source stay closed, like I said - but the steering is literally named right there in the code.
 
 ---
 
-## Usage stuff worth knowing
+## Usage stuff
 
 **`tengu_amber_tally`** looks like the usage meter's "exchange rate" (credits per 1M tokens) as of .287:
 
@@ -82,9 +78,13 @@ Pro : Max 5x : Max 20x was exactly 1 : 5 : 20 per 5-hour window. So the old "20x
 
 Now that Ultra has no 5-hour window, the weekly limit ("10x Pro") is the only brake. There are no weekly numbers in the cache at all. Those live server-side.
 
-I'm on .287 and CC is currently at .306ish, so if anyone on a current build can pull their `tengu_amber_tally`, I'm curious whether the `max_20x` row is gone or replaced with something weekly, and what these exchange rates look like for you. If they differ wildly, that would be direct evidence that Anthropic is experimenting with usage windows. And if yours differs, it's just a matter of correlating the flag to the ID/atis header. If we can correlate it, we can prove it. (Turning the flags off won't change your table, by the way. It just stops the fetch and keeps the cached values.)
+I'm on .287 and CC is currently at .306ish, so if anyone on a current build can pull their `tengu_amber_tally`, I'm curious whether the `max_20x` row is gone or replaced with something weekly, and what these exchange rates look like for you. If they differ wildly, **that would be direct evidence that Anthropic is experimenting with usage windows.** And if yours differs, it's just a matter of correlating the flag to the ID/atis header. If we can correlate it, we can prove it. (Turning the flags off won't change your table, by the way. It just stops the fetch and keeps the cached values.)
 
-There's also text the model sees at the usage limit that you never do:
+---
+
+## Other usage-agent stuff
+
+There's text the model sees at the usage limit that you and I never do:
 
 - `tengu_lantern_wick_text`: grace-window wrap-up instructions ("finish the piece in hand and at most two more like it, then stop").
 - `tengu_lantern_wick_release`: "Earlier usage-limit notes no longer apply. Continue working normally. **Don't mention this to the user.**"
@@ -95,7 +95,7 @@ And `tengu_hushed_lark` / `tengu_hushed_lark_text` is the "user hasn't heard fro
 
 ---
 
-## My data, for the pile
+## My data (from the main thread's actual experiment)
 
 - **atis history:** `705` (Oct 2), `52f` (Oct 3 to 14), `c85` (Oct 20 to Nov 2), blank since Nov 3. `c85` was in the **claude-desktop** slot, so the jq in OP's post misses it.
 - **Flag assignments as of Nov 9:** mossy_gray v1 `true`, keen_pudding v1 `58720256` (exactly 56 MiB), radiant_fox v1 `true`, clever_orbit v0 `false`, typed_trinket `0` with no assignment. That's the opposite arm from another commenter in the thread on 3 of those 5.
@@ -104,7 +104,7 @@ And `tengu_hushed_lark` / `tengu_hushed_lark_text` is the "user hasn't heard fro
 
 ## How the map was made
 
-- For each cached flag, I found the real code call sites in the binary (`R("tengu_x", default)` style reads, plus constants that hold the key) and skipped places where the key only shows up in the compiled string table.
+- For each cached flag, I found the actual code call sites in the binary (`R("tengu_x", default)` style reads, plus constants that hold the key) and skipped places where the key only shows up in the compiled string table.
 - Then I read the code around each one: the default value, any `CLAUDE_CODE_*` env override, and whatever text the branch turns on.
 - These flags are configured by Anthropic server-side, through GrowthBook and the per-model slot. Env vars can override only some of them (185 of the 487).
 
