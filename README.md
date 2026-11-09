@@ -82,7 +82,7 @@ I'm on .287 and CC is currently at .306ish, so if anyone on a current build can 
 
 ---
 
-## Other usage-agent stuff
+## Other usage-adjacent stuff
 
 There's text the model sees at the usage limit that you and I never do:
 
