@@ -19,7 +19,7 @@ This started as a follow-up to [this r/ClaudeCode thread](https://www.reddit.com
 
 My setup has a plugin that keeps a copy of the composed system prompt sections and flags it when the engine sends different text than before. It's part of a base system prompt identity layer injection of my own design.
 
-I set `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1` in `settings.json` (in the `env` block) and opened a new interactive session. I kept the same CC version before and after (2.1.287), and maden no other changes.
+I set `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1` in `settings.json` (in the `env` block) and opened a new interactive session. I kept the same CC version before and after (2.1.287), and made no other changes.
 
 In the new session:
 
