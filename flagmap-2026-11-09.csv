@@ -1,0 +1,488 @@
+﻿key,value,confidence,what_it_does
+tengu-model-error-overrides,{},E,"Per-model block list: a model entry with a ""block"" message refuses requests to that model with that error."
+tengu-off-switch,{activated:false},E,"Global kill switch: when activated, requests to gated models fail immediately with an off-switch error."
+tengu-top-of-feed-tip,"{tip:"""",color:""""}",E,"Emergency tip pinned at the top of the feed (persistent or one-time, can target ""taints"")."
+tengu_1p_event_batch_config,{...},E,"Batching config for first-party telemetry export (delay, batch size)."
+tengu_agents_md_mod,true,E,"Loads AGENTS.md as project instructions when there's no CLAUDE.md (or beside it, per instructionFiles option)."
+tengu_alder_compass,false,E,Shows the /powerup interactive-tutorial tip to new users (<10 startups).
+tengu_amber_anchor,false,I,Daemon cold-start mode for background agents (agent view / fleet).
+tengu_amber_ferry,false,I,Lets prompt submission go ahead before attachments/files finish resolving (remote IO).
+tengu_amber_flint,true,E,"Gate for experimental Agent Teams (teammates), together with CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS."
+tengu_amber_lark,true,E,Appends extra usage info (dim line) to the /usage-style status output.
+tengu_amber_lattice,{plugins:[...]},E,Allowlist of official plugins that get your Anthropic auth token passed into their environment.
+tengu_amber_lynx,false,I,"Feedback dialog: option to save/send a full feedback bundle (transcripts, background tasks)."
+tengu_amber_moleskin,"{default:{repl:0.15,sdk:0.15}}",E,"Context-window fraction table for precomputed compaction (when to pre-compact), per surface."
+tengu_amber_packet,false,I,Precomputed (background) compaction arm.
+tengu_amber_prism,false,E,"Appends an extra hint to the ""Tool loaded."" message after a deferred tool loads. You're in v0 (off)."
+tengu_amber_redwood2,"""""",E,Overrides the model used for compaction/summaries (default claude-opus-4-8).
+tengu_amber_redwood3,"""""",E,Fallback slot for the same compaction-model override.
+tengu_amber_relay,false,I,Bridge/remote-control relay feature switch.
+tengu_amber_rokovoko,0.2,E,Default context fraction for precomputed compaction when no per-surface table applies.
+tengu_amber_sentinel,true,E,"Adds Monitor/push-notification guidance to the system prompt (""when an event lands the user would want to act on, send a push"")."
+tengu_amber_sextant,true,E,"PROMPT: ""autonomy_append"" section, ""You are operating autonomously. The user is not watching... asking 'Want me to...?' will block"" (only when running unattended)."
+tengu_amber_tally,{credits table},E,Usage-meter exchange rates: 5-hour credits per plan and credits per million tokens per model.
+tengu_amber_tollgate,false,E,"Allows plugin ""install from source"" links; off means install links are disabled."
+tengu_async_snowglobe,false,I,Per-turn timing reporting (CLAUDE_CODE_PER_TURN_TIMING).
+tengu_atomic_ocean,true,E,Gzip-compress API request bodies.
+tengu_auto_mode_config,"{enabled,twoStageClassifier,...}",E,"Auto (permission) mode config: classifier setup, fast-mode interaction, etc."
+tengu_ax_screen_reader,true,I,Screen-reader accessibility mode support.
+tengu_bad_survey_transcript_ask_config,{probability:1},E,"After a ""bad"" feedback-survey answer, how often to ask to share the transcript."
+tengu_basalt_meadow,true,E,Terminal glyph-atlas recording for xterm rendering (perf/debug).
+tengu_basalt_scarp,false,I,Prompt-cache tweak for the extract_memories background call.
+tengu_basalt_spur,true,E,1-hour prompt-cache TTL for some requests.
+tengu_bg_attach_stall_ms,5000,E,How long attaching to a background session can stall before giving up.
+tengu_binary_balloon,false,E,Builds tool definitions from a recorded prompt snapshot instead of rebuilding them.
+tengu_birch_kettle,false,E,"Built-in skill: ""Answer questions about Claude Code features and settings""."
+tengu_birch_lantern,"""off""",E,/powerup onboarding style (banner or step-through); off for you.
+tengu_bramble_lintel,7,E,Auto-memory extraction runs every N turns (7).
+tengu_brass_plover,true,E,Artifact presence (live connection for published artifacts).
+tengu_brass_sled,false,E,Adds detected build tools to the PowerShell tool prompt.
+tengu_breezy_crescent,true,E,"Enables the Monitor tool (watch-a-command, ""re-arm if needed"")."
+tengu_breezy_fairy,true,I,Sends device-proof headers on requests (security tier / attestation).
+tengu_brick_follow,false,I,Voice: forward interim (typed) transcripts.
+tengu_bridge_attestation_enforce,true,E,Remote Control requires an attested trusted device; cloud sessions can't message it.
+tengu_bridge_attestation_enforce_config,"{accept_level:VERIFIED_KEYLESS_DEVICE,...}",E,Which device-attestation levels Remote Control accepts.
+tengu_bridge_auth_revive,true,I,Re-auth bridge (Remote Control) sessions when tokens expire.
+tengu_bridge_host_profile,"""off""",E,Shares host hardware profile (GPU/CUDA) with Remote Control.
+tengu_bridge_min_version,{minVersion:2.1.139},E,Minimum CC version allowed for Remote Control.
+tengu_bridge_partial_messages,true,E,Streams partial messages over the bridge.
+tengu_bridge_placeholder_sweep,true,I,Cleans up placeholder records for bridge sessions.
+tengu_bridge_poll_interval_config,{poll ms...},E,Remote Control polling intervals.
+tengu_bridge_rc_child_idle_exit_ms,3600000,E,Remote Control child process exits after 1h idle.
+tengu_bridge_repl_v2_config,{retries...},E,Remote Control REPL v2 init retries and min version.
+tengu_bridge_requires_action_details,true,E,"Remote Control: send details (question/tool) with ""needs your action"" notifications."
+tengu_bridge_selfheal_heartbeats,true,E,Remote Control self-healing heartbeats.
+tengu_bridge_subagent_frames,true,E,Forward subagent activity frames over Remote Control.
+tengu_bridge_unarchive_on_resume,true,E,Unarchive a cloud code session when you resume it.
+tengu_brindle_causeway,true,E,Picks MCP runtime v2 (vs v1) for MCP connections.
+tengu_brisk_meadow,true,E,Inline tools (tool output rendered inline) in interactive mode.
+tengu_bubbly_harbor,true,E,"PROMPT: marks automated-trigger runs: ""No interactive user is present in this run and no user request is relayed..."""
+tengu_bubbly_meteor,true,I,Agent/subagent lineage tracking (parent agent ids).
+tengu_buzzing_lightning,false,I,Artifact REPL path (publish artifacts from a REPL).
+tengu_buzzing_pike,0,E,Gzip request-body blocks mode (0 = off).
+tengu_byte_stream_idle_timeout_ms,180000,E,API stream idle timeout (3 min) before treating the stream as dead.
+tengu_c4e_slash_upsell,true,E,"""/X requires a claude.ai subscription"" upsell for API-key users."
+tengu_canary,{},E,Canary version channel for auto-update.
+tengu_ccr_bridge,true,E,Enables Remote Control (the bridge) for claude.ai subscribers.
+tengu_ccr_bundle_max_bytes,104857600,E,Max git bundle size (100 MB) when seeding a cloud session from local repo.
+tengu_ccr_bundle_seed_enabled,true,E,Seed cloud sessions with a git bundle of your local repo.
+tengu_ccr_classifier_keepalive_enabled,false,E,Keepalives during auto-mode classifier calls in cloud sessions.
+tengu_ccr_drop_unwatched_stream_events,true,E,Cloud sessions drop stream events nobody is watching.
+tengu_ccr_handoff_metadata,true,E,Send branch/worktree metadata on cloud session handoff.
+tengu_ccr_hook_keepalive_enabled,true,E,Keepalives while hooks run in cloud sessions.
+tengu_ccr_idle_heartbeat,true,E,Cloud session idle heartbeat.
+tengu_ccr_keepalive_after_stop_enabled,true,E,Keep cloud session alive after stop (up to 6h).
+tengu_ccr_no_subscriber_flush_ms,2000,E,Cloud: flush interval when no viewer is subscribed.
+tengu_ccr_no_subscriber_hold_ms,10000,E,Cloud: hold uploads up to 10s when no viewer is subscribed.
+tengu_ccr_plugin_refresh_in_idle_enabled,false,E,Cloud: refresh plugins while idle.
+tengu_ccr_reactivation_beat,true,E,Cloud: heartbeat on reactivation.
+tengu_ccr_reconnect_beat,true,E,Cloud: heartbeat on reconnect.
+tengu_ccr_replay_acks_at_request_dispatch,true,E,Cloud: replay acks at request dispatch.
+tengu_ccr_sdk_mcp_remote_manifests,false,I,Cloud: send SDK MCP tool manifests remotely.
+tengu_ccr_stream_event_flush_ms,400,E,Cloud: stream event flush interval.
+tengu_ccr_stream_first_flush_ms,20,E,Cloud: first stream flush delay.
+tengu_ccr_stream_flush_on_first_delta,true,E,Cloud: flush on the first streamed delta.
+tengu_ccr_subagent_skip_on_delta,false,I,Cloud: skip subagent frames on delta uploads.
+tengu_ccr_upload_trim,"{envelope,media}",E,Cloud: trim envelopes/media from uploads.
+tengu_ccr_v2_bridge_create_cli,true,E,CLI creates bridge sessions via CCR v2 API.
+tengu_ccr_v2_send_events_cli,true,E,CLI sends events via CCR v2 API.
+tengu_ccr_v2_session_crud_cli,true,E,CLI session create/read/update/delete via CCR v2.
+tengu_cedar_lantern,true,E,"PROMPT: ""act_dont_rederive"" section, ""When you have enough information to act, act. Do not re-derive facts..."" (it's in my prompt now)."
+tengu_cedar_plume,false,E,Tip advertising Claude Design (/design).
+tengu_chair_sermon,false,E,Reminder folding: collapse repeated system reminders.
+tengu_cheerful_horizon,false,I,Org connection status check (claude.ai org linked or not).
+tengu_chomp_inflection,true,E,Prompt suggestions (ghost-text next prompt) in the input box.
+tengu_chomp_sable,false,I,Prompt-suggestion variant: only after not-user-started turns.
+tengu_chrome_auto_enable,true,E,Auto-enable Claude in Chrome when the extension is present.
+tengu_chrome_install_upsell,true,E,Upsell to install the Chrome extension.
+tengu_cinder_plover,"""""",E,PROMPT: model-specific text inserted into a tool's prompt (lean prompt mode); empty for you.
+tengu_cinder_swift,"""interrupt""",E,"Push notification ""Claude needs your permission to use X"" interrupts you."
+tengu_classifier_disabled_surfaces,"""""",E,Surfaces where the summary classifier is disabled.
+tengu_classifier_summary_llm_emit,true,E,Use an LLM (vs heuristic) to summarize session status (blocked/done/working).
+tengu_claudeai_skills_sync_shared_round,true,I,Shared sync round for claude.ai skills sync.
+tengu_clever_orbit,false,E,"WebFetch done by a dedicated fetch agent. You're in control (v0, off)."
+tengu_cobalt_harbor,false,E,Persistent remote session default (when no org policy says otherwise).
+tengu_cobalt_harbor_notice,true,I,Notice about persistent remote sessions (VS Code/tmux).
+tengu_cobalt_plinth,true,E,Master switch for Artifacts in Claude Code.
+tengu_cobalt_plinth_alder,true,E,Artifacts: allow delete.
+tengu_cobalt_plinth_bracken,true,E,Artifacts: multi-file artifacts.
+tengu_cobalt_plinth_bryony,true,E,Artifacts: five-class ask flow for publishing.
+tengu_cobalt_plinth_burnet,true,E,Artifacts: frame API routes (deploy/upload/track).
+tengu_cobalt_plinth_damson,true,E,Artifacts: separate deferred Artifact toolset.
+tengu_cobalt_plinth_fennel,false,I,Artifacts: frame relay feature.
+tengu_cobalt_plinth_fern,true,E,Artifacts: frame contract endpoint.
+tengu_cobalt_plinth_larch,true,E,Artifacts: artifact types (create from type) and cloud create.
+tengu_cobalt_plinth_linden,true,E,Artifacts: type creation inside remote sessions.
+tengu_cobalt_plinth_madder,true,E,Artifacts: availability outside claude.ai web.
+tengu_cobalt_plinth_mallow,false,I,Artifacts: sub-feature (unclear).
+tengu_cobalt_plinth_moss,true,I,Artifacts: frame contract sub-feature.
+tengu_cobalt_plinth_samphire,true,I,Artifacts: sub-feature near multi-file/hot reload.
+tengu_cobalt_plinth_sedge,true,E,Artifacts: refuse reading public artifacts from outside your org unless approved.
+tengu_cobalt_plinth_sorrel,true,E,Artifacts: gate for the artifact tool being offered.
+tengu_cobalt_plinth_willow,true,E,"Artifacts: ""open"" action."
+tengu_cobalt_plinth_woad,true,E,"Artifacts: ""quickstart"" action."
+tengu_cobalt_plinth_yew,true,I,Artifacts/MCP: CCR-hosted connector handling.
+tengu_cobalt_ridge,true,E,Windows: allow PowerShell tool when Git Bash isn't found.
+tengu_cobalt_thicket,false,I,Startup prefetch tweak.
+tengu_cobalt_wren,false,E,Forces heuristic (not LLM) status summaries.
+tengu_compact_cache_prefix,true,E,Compaction reuses the conversation's cache prefix.
+tengu_compiled_acorn,true,I,Compiled/cached artifact of some startup asset (CLAUDE_CODE_COMPILED_ACORN).
+tengu_composed_quail,true,I,Remote Control sub-feature.
+tengu_concurrent_candle,false,E,"Artifacts ""start kit""."
+tengu_concurrent_moonbeam,false,I,Terminal title/stdout guard behavior.
+tengu_context_usage_bulk_counts,false,E,/context counts tokens in bulk vs per item.
+tengu_copper_kite,false,I,Per-turn reporting variant (served-true check).
+tengu_copper_thistle,false,I,HIPAA-related UI gate.
+tengu_cosmic_shore,true,E,Background Bash commands get a deadline (timeout limits background runs).
+tengu_cowork_auto_mode_include_allowed_write_mcp,true,E,Auto mode: classify destructive calls on policy-allowed MCP servers too.
+tengu_cowork_chrome_automode_default,true,E,Auto mode: classifier floor for Chrome actions.
+tengu_cozy_teapot,"""strict""",E,"STEER: ""bash act-first"" variant (strict vs relaxed), part of the CLAUDE_CODE_BISON_CAIRN steering group."
+tengu_crimson_vector,false,E,Larger base64 image size limit for first-party.
+tengu_cuddly_willow,true,E,Cross-session messaging (SendMessage between local sessions).
+tengu_curious_tower,true,E,"""Tether live"" (live connection between sessions/surfaces)."
+tengu_curious_tower_stateless_models,"""""",E,Models that run stateless in the tether feature.
+tengu_dapper_brooks,false,I,Renewal timing tweak (lease renewals).
+tengu_dapper_dawn,false,I,Interactive-activity tracking for idle detection.
+tengu_dash_flame,true,E,Model fallback: server default fallbacks (switch model on overload).
+tengu_deferred_stub_tool,true,E,Adds a stub tool so deferred tool loading works with cache.
+tengu_delegated_quail,"{mode:shadow,...}",E,"Server-delivered model catalog (shadow mode: fetched, not yet used)."
+tengu_desktop_upsell,"{shortcut_tip:true,...}",E,Tips upselling the desktop app.
+tengu_destructive_command_warning,false,E,Warning on destructive shell commands in permission prompts.
+tengu_disable_live_host_context,false,E,Turns off live host-context lines after tool calls.
+tengu_doorbell_agave,false,E,Enforces web-search/MCP isolation: account memory server resources withheld from subagents.
+tengu_dreamy_frost,true,E,API dispatch route v2 (CLAUDE_CODE_DISPATCH_V2D).
+tengu_drift_lantern,true,E,Event-loop stall detector.
+tengu_drifting_reef,"{browserClicks,...}",E,"Which actions get one-line ""action summaries"" (browser clicks, computer use); prompt text: ""State the effect only, and accurately""."
+tengu_dunwich_bell,false,E,Memory feedback survey.
+tengu_eager_pillow,true,I,Faster lookup of unresolved tool uses on resume.
+tengu_elegant_ocean,true,E,PROMPT: sandbox guidance text (macOS Seatbelt / Linux bubblewrap) in the Bash tool prompt.
+tengu_elegant_pancake,true,I,Signature/verification policy for binary downloads.
+tengu_ember_latch,false,E,Lets Pro/Max users manage usage-credit (overage) settings themselves.
+tengu_encapsulated_pebble,true,E,"Announces ""claude plugin eval"" as available."
+tengu_event_loop_stall,true,E,Non-blocking stdout to avoid event-loop stalls.
+tengu_event_sampling_config,{per-event rates},E,Telemetry sampling rate per event name.
+tengu_expressive_whistle,false,E,"ATIS pin check: if the server's x-cc-atis-current differs from the cached clientData, refetch it. Off for you."
+tengu_fancy_crab,300,I,Memory-context fetch interval/size (/memory_context).
+tengu_federated_flask,false,E,PR Steward integration (GitHub label-driven PR babysitting).
+tengu_feedback_survey_config,"{timings,probability}",E,Session feedback survey timing/probability.
+tengu_fennel_godwit,false,E,"STEER KILL SWITCH: when true, disables the opus_5_prompt_bundle sections (Corrections, Delivering work, reduced delegation). False = bundle on."
+tengu_fgts,true,E,Fine-grained tool streaming (stream tool input as it's generated).
+tengu_fine_survey_transcript_ask_config,{probability:0.5},E,"After a ""fine"" survey answer, how often to ask for the transcript."
+tengu_fizzy_grove,false,I,Distinct stop reason for user interrupts.
+tengu_fleet_past_sessions,false,E,Fleet/agent view shows past sessions.
+tengu_flickering_rain,true,E,Sandbox: offer per-command network allow lists.
+tengu_flint_harbor_prompt,{prompt...},E,The /team-onboarding prompt and guide template.
+tengu_flint_harbor_share,false,E,Sharing generated onboarding guides with the team.
+tengu_frond_boric,{},E,Per-event telemetry on/off map.
+tengu_gentle_frost,false,I,Session-pinned feature (unclear).
+tengu_gentle_hammock,true,E,Gzip request bodies from cloud (CCR) workers.
+tengu_gleaming_fair,false,E,"""Resume where you left off?"" prompt after 70 min / 100k tokens."
+tengu_gleaming_fair_reuse,true,E,Variant of the resume-return prompt.
+tengu_glimmering_glade,true,I,Remote Control sub-feature.
+tengu_glowing_orbit,true,E,"Permission denials can suggest ""run this first, exactly as written""."
+tengu_golden_popcorn,0,E,Gzip compression level (0 = default).
+tengu_good_survey_transcript_ask_config,{probability:0.5},E,"After a ""good"" survey answer, how often to ask for the transcript."
+tengu_goofy_jellyfish,"""""",E,Compaction-related model/string override.
+tengu_gorse_fathom,false,E,"PROMPT: ""Project skill upkeep"" section in the memory instructions."
+tengu_gorse_plover,false,E,"STEER: ""bash act first"" steer (CLAUDE_CODE_GORSE_PLOVER). Off for you."
+tengu_groovy_eclipse,true,I,Compaction sub-feature.
+tengu_gypsum_kite,true,E,"Model picker label on Pro: Opus ""~2x usage vs Sonnet""."
+tengu_harbor,true,E,Channel plugins (discord/telegram/imessage) allowed.
+tengu_harbor_kite,true,E,Peer messaging between local sessions (ListAgents/SendMessage).
+tengu_harbor_kite_cloud,false,E,Peer messaging with your cloud sessions.
+tengu_harbor_kite_limits,{},E,Peer message queue limits.
+tengu_harbor_kite_mode_emit,true,I,Telemetry on peer-messaging mode decisions.
+tengu_harbor_kite_pacing_off,false,E,Turns off pacing of outbound peer messages.
+tengu_harbor_kite_win,true,E,Peer messaging allowed on Windows.
+tengu_harbor_ledger,[channel plugins],E,"List of channel plugins (discord, telegram, fakechat, imessage)."
+tengu_harbor_permissions,true,E,Random 5-letter names (profanity-filtered) for something permission-related.
+tengu_harbor_willow,true,E,Allows settings to set appendSystemPrompt / default permission mode.
+tengu_hashed_lark,false,I,Per-turn timing variant.
+tengu_hawthorn_steeple,false,I,Tool-result replacement dedupe across turns.
+tengu_haze_glass,false,E,Org-level shared memory stores.
+tengu_hazel_osprey,false,I,Retry/fallback on 422/424 invalid-request errors above a token floor.
+tengu_hazel_osprey_floor,75000,I,Token floor for that fallback.
+tengu_hazel_trellis,3,E,"Max subagent spawn depth (subagents spawning subagents), 3."
+tengu_hearth_member_relay_rows_enabled,true,E,Auto mode / projects: relay rows from team members.
+tengu_hearth_resolved_rows,"""full""",E,Auto mode / projects: show resolved rows (full / model_only / off).
+tengu_hidden_frog,true,I,Compaction sub-feature.
+tengu_hipaa_history_retention_prune,true,E,HIPAA orgs: prune old history on the retention sweep.
+tengu_hover_rest,false,E,Terminal hover/rest rendering behavior.
+tengu_humble_hammock,true,E,Forced/flagged feature with a fixed value source (CLAUDE_CODE_HUMBLE_HAMMOCK); purpose unclear.
+tengu_humble_zephyr,false,E,"Todo reminders only when ""brief"" mode is on."
+tengu_hushed_lark,5,E,Silent-turn reminder fires after 5 turns without visible text.
+tengu_hushed_lark_text,"""The user hasn't heard...""",E,"PROMPT: text of that silent-turn reminder. (Built-in default is longer: ""...keep them updated when there's something to tell"".)"
+tengu_ide_rc_auto_enable,true,E,Auto-enable Remote Control from IDE sessions.
+tengu_idle_amber_finch,false,E,Hides the /upgrade command.
+tengu_import,true,E,"""claude import"" command (import config)."
+tengu_iridescent_crystal,false,I,Auto-mode server-side classifier for third parties.
+tengu_iridescent_gem,0.01,E,Sample rate for prompt-cache prefix-break hash logging.
+tengu_jade_anvil_4,false,I,Usage-limit screen variant (upgrade paths for Max 20x/team).
+tengu_jaunty_ember,true,I,Main-agent message-queue handling.
+tengu_jazzy_goblet,true,E,"""Switch models when a message is flagged"" setting: refusal fallback when cyber safeguards flag legit work."
+tengu_joyful_globe,true,I,Interactive-mode feature (unclear).
+tengu_juniper_relay,true,E,In-session feedback drafting tool (send feedback).
+tengu_juniper_relay_config,{},E,Limits for that feedback tool (calls/drafts per session).
+tengu_juniper_sundial,10,E,Turns between memory maintenance passes.
+tengu_juniper_vale,"{enabled:false,...}",I,Inline feedback popover config.
+tengu_kairos_cron,true,E,CronCreate/scheduled prompts.
+tengu_kairos_cron_durable,false,E,Durable scheduled tasks (persist to .claude/scheduled_tasks).
+tengu_kairos_input_needed_push,true,E,Push notification when input is needed.
+tengu_kairos_push_notifications,true,E,PushNotification tool (terminal + mobile via Remote Control).
+tengu_kairos_ready_nudge,"{probability:0.25,...}",E,Tip nudging Remote Control push setup.
+tengu_kestrel_arch,"""OFF""",E,Tip for the desktop app after 10 startups.
+tengu_kestrel_moor,false,E,"ATIS pin: when on, prefers the refreshed server ATIS pin over the cached atis value."
+tengu_keybinding_customization_release,true,E,Custom keybindings.
+tengu_lantern_prism,true,E,"Announces ""claude plugin eval"" feature."
+tengu_lantern_sconce,true,E,Usage limit: continue working on usage credits.
+tengu_lantern_sconce_copy,{credits_on...},E,"Text for that (""Usage limit reached · continuing to work..."")."
+tengu_lantern_spool,true,I,Usage-limit flow sub-feature (extra usage).
+tengu_lantern_wick_mode,"""off""",E,Usage-limit grace window mode: wrap-up / next-steps / off. Off for you.
+tengu_lantern_wick_release,"""Earlier usage-limit notes... Don't mention this to the user.""",E,PROMPT: hidden message when the grace window ends. Also has _by_model variants.
+tengu_lantern_wick_text,"""Usage limit reached; a short grace...""",E,PROMPT: grace-window wrap-up instruction to the model. Also a _by_model variant (tengu_lantern_wick_text_by_model).
+tengu_lapis_anchor,"""padded-countdown"" (slot: off)",E,Total-tokens countdown reminder in turns. Your slot overrides it to off.
+tengu_lapis_anchor_budget,15000000,E,Token budget the countdown counts against.
+tengu_lapis_anchor_user_turn,true,E,Countdown appears after user turns.
+tengu_lexical_crystal,true,E,"Wraps cross-session messages: ""This is not a message from the person."""
+tengu_lexical_glade,false,E,Warning when org-locked thinking blocks change org.
+tengu_lilac_loom,null,E,"""Feature of the week"" campaign."
+tengu_lively_beaver,true,I,Text-parsing feature (bracket balancing in links).
+tengu_lively_waffle,true,E,Subagents hand their final report back via SendMessage. (Correction: earlier I called this an injection guard. It isn't.)
+tengu_log_datadog_events,true,E,Send events to Datadog.
+tengu_loggia_roster,[],E,"Roster of early-access (""-eap"") model IDs you can use. Empty for you."
+tengu_long_context_survey_probability,"""""",E,Long-context survey probability (default 0.2).
+tengu_long_context_survey_question_variant,"""""",E,"Survey variant; one asks ""How well is Claude following the instructions you gave earlier in this conversation?"""
+tengu_long_context_survey_threshold,"""""",E,Context size that triggers that survey.
+tengu_long_context_survey_trigger_mode,"""""",E,How that survey triggers.
+tengu_lovely_umbrella,false,I,Served-true check for a per-turn feature.
+tengu_lucid_anchor,true,I,Teleport/tether sub-feature.
+tengu_lucky_brooks,false,E,Caps how much of the first message is sent to generate the session title.
+tengu_lucky_quill,true,I,Remote Control sub-feature.
+tengu_luminous_seal,true,I,Remote Control sub-feature.
+tengu_madrone_spindle,true,E,"Artifact comment threads relayed to Claude (""[Artifact comment sent to Claude]"")."
+tengu_madrone_spindle_corbel,false,E,Comment threads from the desktop app.
+tengu_madrone_spindle_newel,false,I,Comment-thread timing sub-feature.
+tengu_magical_pixel,false,E,Enterprise tip for iOS app developers.
+tengu_maple_pier,true,E,Nudge to make auto mode your default permission mode.
+tengu_maple_sundial,false,E,Moves /vim and similar into /config.
+tengu_marbled_teal,true,E,"Shows effort cost multiplier (""~2x"") in the effort picker, from each model's effort_cost_index."
+tengu_max_version_config,{},E,Max allowed version / forced downgrade.
+tengu_mcp_claudeai_eligibility_gate,true,E,Hides claude.ai MCP connectors you're not eligible for.
+tengu_mcp_directory_visibility,null,E,Which MCP directory listings are visible.
+tengu_mcp_drop_invalid_tool_schemas,"[""*""]",E,Drop MCP tools with invalid schemas (all servers).
+tengu_mcp_legacy_url_elicitation,true,E,Legacy URL elicitation for MCP.
+tengu_mcp_local_oauth_blocked_hosts,{hosts:[...]},E,MCP hosts where local OAuth is blocked (claude.com-hosted Gmail/M365...).
+tengu_mcp_memory_cgroup,false,E,Run MCP servers in a memory cgroup (Linux).
+tengu_mcp_negotiation_server_denylist,[bridge.claudeusercontent.com],E,Hosts that use the legacy MCP handshake.
+tengu_mcp_normalize_root_combinators,"[""*""]",E,Normalize top-level anyOf/oneOf in MCP tool schemas.
+tengu_mcp_protocol_negotiation_ccr,true,E,Auto MCP protocol negotiation for CCR proxy.
+tengu_mcp_protocol_negotiation_claudeai,true,E,Auto MCP protocol negotiation for claude.ai connectors.
+tengu_mcp_protocol_negotiation_http,true,E,Auto MCP protocol negotiation for HTTP servers.
+tengu_mcp_protocol_negotiation_stdio,true,E,Auto MCP protocol negotiation for stdio servers.
+tengu_mcp_singleton_unwrap,true,E,Unwrap single-text MCP results instead of JSON-dumping them.
+tengu_mcp_stateless_skip_init,true,E,Skip init for stateless MCP servers.
+tengu_mcp_step_up_auth_dialog,true,E,Dialog for MCP step-up (extra scope) auth.
+tengu_mcp_subagent_prompt,false,E,New prompt for truncated/large MCP results. You're control (v0).
+tengu_media_byte_cap,25165824,E,Max media bytes per request (24 MiB).
+tengu_mellow_hollerith,false,I,"Built-in ""claude-test"" browser runner plugin."
+tengu_mem_push_delete_mode,"""corroborate""",E,Memory-store deletes need corroboration (vs immediate/never).
+tengu_mill_orange,false,I,Remote memory dir feature.
+tengu_mint_lanes,false,E,"Slash-menu grouped into ""lanes"" by kind."
+tengu_misty_anchor,false,I,Memory-context system reminder variant.
+tengu_misty_twilight,true,E,Abort pending MCP elicitations when the last client disconnects.
+tengu_modular_mochi,true,E,Auto mode: computer-use classifier checks.
+tengu_moonlit_panda,true,E,LSP manager in remote sessions.
+tengu_moss_anchor,true,E,Bridge child sessions default to auto permission mode.
+tengu_moth_copse,false,E,Forces memory stores on.
+tengu_nankeen_kestrel,false,E,Windows sandbox (ClaudeCodeSandbox).
+tengu_native_cursor,true,E,Native terminal cursor (accessibility).
+tengu_nifty_finch,true,I,Path autocomplete suggestion tweak.
+tengu_nifty_lemur,"{enabled,...}",E,"/limit-reset: reset session limit using weekly limit, 1/week."
+tengu_non_deferrable_builtins,{},E,Built-in tools that must never be deferred (also read from the per-model slot).
+tengu_ochre_bittern,false,E,Artifacts: hold/auto-reply to comments.
+tengu_ochre_plover,false,E,"Permission rule ""action:reply"" auto-allow."
+tengu_ochre_wren,true,E,"PROMPT/STEER: ""intro_frame"" arm. True = opener ""You are an agent working with the user toward their goals, using your own judgment along the way.""; false = ""You are an interactive agent that helps users with software engineering tasks."" THIS is the line that flipped tonight."
+tengu_onyx_plover,"{enabled:false,...}",E,"""Auto dream"": background memory consolidation after 24h / 3 sessions."
+tengu_onyx_sluice,true,E,Reading artifact comments.
+tengu_orford_ness,true,E,Error reporting pipeline.
+tengu_passport_quail,false,E,Memory extraction to a CCR memory server.
+tengu_pewter_brook,false,E,Fullscreen (alt-screen) mode gate.
+tengu_pewter_summit,true,I,Overage (extra usage) UI.
+tengu_plugin_binary_assets,false,E,Plugins can ship binary assets.
+tengu_plugin_feedback_survey_config,{},E,Plugin feedback survey config.
+tengu_plugin_hooks_modules,true,E,Plugin hooks as function modules (what the den uses).
+tengu_plugin_official_mkt_git_fallback,true,E,Fall back to git when the official marketplace CDN fails.
+tengu_plum_vx3,true,E,Web search runs on a separate (smaller) model instead of the main loop model.
+tengu_polished_dewdrop,"""off""",E,Guardrail for stray text blocks (drop/error).
+tengu_polished_lagoon,true,E,Session notices between sessions.
+tengu_polished_tulip,true,E,PROMPT: Bash tool prompt carries the pre-ship / attribution guidance.
+tengu_post_compact_survey,false,E,Survey after compaction.
+tengu_prompt_cache_1h_config,{allowlist:[...]},E,Which query sources get 1-hour prompt cache for subscribers.
+tengu_quartz_pipit,true,E,Goals: stop clears the goal.
+tengu_quartz_thimble,true,E,Publish eval reports.
+tengu_quiet_ember,false,E,"""Responsive mode"": Claude replies in a sentence before thinking or using tools, every prompt. Off."
+tengu_quiet_harbor,false,E,Daemon cold start asks vs transient.
+tengu_quiet_heron,true,I,Teleport thread-inheritance feature.
+tengu_quiet_lantern,true,I,Auto-mode classifier feature.
+tengu_quiet_larkspur,true,I,Bash permission parsing tweak for env-var prefixed commands.
+tengu_quiet_slate_wren,false,I,Upgrade command variant.
+tengu_radiant_heron,false,I,Some payload-sourced gate (three-state: true/false/unknown).
+tengu_rate_limit_promo_notices,[],E,Promo notices in the rate-limit bar.
+tengu_rc_long_turn_nudge,"{thresholdSec:10,...}",E,"""Your session is ready, continue from your phone"" nudge on long turns."
+tengu_rc_permission_nudge,"{afterPromptCount:2,...}",E,Nudge to set up Remote Control for permission prompts.
+tengu_reactive_compact_remote,true,E,Reactive compaction in remote sessions.
+tengu_read_dedup_killswitch,true,E,Kills read dedup: unchanged re-reads always return full content.
+tengu_reflective_bee,"""off""",E,"""Connect GitHub to claude.ai?"" offer after a push."
+tengu_reflective_wolf,true,E,Attribution announcement (the Co-Authored-By lines reminder).
+tengu_remote_auto_mode_include_destructive_mcp,false,E,Remote auto mode classifies destructive MCP calls.
+tengu_review_bughunter_config,"{fleet_size:5,...}",E,"/code-review ultra config: 5 agents, 10 min, ""$10-$20""."
+tengu_rustling_orbit,false,E,Policy limits: 404 with no cache means no restrictions.
+tengu_rustling_pixel,"""upgrade""",E,Keep thinking blocks from a previous model when you switch to a newer one.
+tengu_saddle_lantern,true,I,Cached feature check (unclear).
+tengu_saffron_credits_only_tiers,"[""enterprise""]",E,Plan tiers that are usage-credits only.
+tengu_saffron_lattice,{planLimitsEndDate:2026-07-20...},E,Plan-limits launch config (end date of old plan limits).
+tengu_saffron_wren,true,E,Goal check-ins while idle.
+tengu_sage_compass2,{enabled:true},E,Advisor tool (a stronger model you can consult).
+tengu_salt_marsh,false,E,"Org-wide ""cc-memory"" store shared by every connected project."
+tengu_satchel_banjo,false,E,Extra-usage expiry notice.
+tengu_scratch,false,E,Scratchpad / bundled skills root.
+tengu_sdk_mcp_manifests,true,E,SDK MCP tool manifests.
+tengu_sepia_cormorant,[],E,Repos allowed to use remote memory.
+tengu_sepia_moth,false,E,Precomputed compaction arm gate.
+tengu_sequential_cloud,false,I,"Prompt-cache keepalive (""cache_touch"") pings."
+tengu_session_name_uniqueness,false,E,Make live session names unique.
+tengu_sessions_elevated_auth_enforcement,true,E,"Trusted-device enrollment for sessions (""This computer was enrolled as a trusted device"")."
+tengu_sharded_beacon,true,I,OAuth token lock-timeout handling.
+tengu_sharded_snowflake,false,E,"Hides ""claude plugin eval"" announcement when true."
+tengu_shimmying_stardust,false,I,Accelerated retry schedule.
+tengu_shining_fractals,false,E,"Spinner tips variant (/clear, /btw tips)."
+tengu_shiny_stardust,false,I,Tool search behavior variant.
+tengu_silent_harbor,false,E,"PROMPT: adds a ""tool_param_json"" section (how to format tool params as JSON)."
+tengu_silk_hinge,false,E,"""Show message timestamps"" setting."
+tengu_silly_waterfall,true,E,Resume trims a dangling meta message.
+tengu_skills_dashboard_enabled,false,E,Skill health dashboard.
+tengu_slate_finch,true,E,"Effort picker labels ""high"" as ""burns fastest, medium handles most tasks""."
+tengu_slate_harbor_experiment,false,E,New /init prompt for writing CLAUDE.md.
+tengu_slate_lantern,true,I,Artifacts hot-update sub-feature.
+tengu_slate_lantern_ember,true,I,Artifacts hot-update sub-feature.
+tengu_slate_thimble,false,I,Memory extraction in non-interactive mode.
+tengu_sleepy_rabbit,false,I,Early settings fetch on warm wake.
+tengu_sleepy_shore,{enabled:true},E,"PROMPT: web-search ""fast"" mode with its own mode description / system hint / addendum."
+tengu_sleepy_snowflake,"""all""",E,Tether-live scope (also readable from the per-model slot).
+tengu_smooth_chipmunk,true,E,Auto-mode classifier gets conversation context.
+tengu_smooth_forest,true,E,Promo text on the usage-limit wall.
+tengu_soft_slate_nudge,"""baseline""",E,Todo-list reminder cadence (baseline vs off).
+tengu_sorrel_avocet,false,E,"Built-in ""deep-research"" workflow (off flag disables it)."
+tengu_sorrel_trellis,true,E,Artifact comments auto-react.
+tengu_sorrel_trellis_newel,false,I,Artifact comment thread sub-feature.
+tengu_sorrel_trellis_tenon,false,E,Artifact comments: don't reopen resolved threads.
+tengu_sprightly_lagoon,false,E,Per-turn effort changes.
+tengu_starry_locket,true,I,Plugin source handling.
+tengu_startup_announcements,[opus-5-5-default...],E,"Startup announcement lines (""Opus 5.5 is now your default..."")."
+tengu_steady_marshmallow,false,I,Served-true check feature.
+tengu_steady_panda,true,I,Initial reply doesn't wait on rescan.
+tengu_steady_sunbeam,false,I,Served-true check feature.
+tengu_stellar_drift,true,I,Deferred-tool binding check across turns.
+tengu_structured_output_strict,false,E,Send strict JSON schemas for tools.
+tengu_subagent_cache_evict,false,E,Evict subagent prompt cache.
+tengu_sunny_locket,{mode:compact},E,"Mid-session auto compaction trigger (mode, min tokens, fire fraction)."
+tengu_swift_lynx,{promo},E,$100 cloud-session credit promo.
+tengu_swift_whistle,true,I,Event logging shutdown handling.
+tengu_swirling_squid,false,E,Artifacts: inherited type grant.
+tengu_synchronous_bunny,true,E,"""Served settings changed"" notices."
+tengu_synthetic_fog,4259840,E,Max answer bytes for some session payload (~4 MB).
+tengu_tab_read_sep,false,I,File-read tab separator format.
+tengu_teal_corbel,true,E,Artifact comments.
+tengu_teal_corbel_finial,true,I,Artifact comments sub-feature.
+tengu_teal_corbel_newel,false,I,API-key approval-before-login flow.
+tengu_teleport_send_to_cloud,false,E,"Teleport menu ""send to cloud""."
+tengu_thinking_block_resumption,false,E,Resume mid-thinking-block after interruption.
+tengu_thistle_grebe,"""default""",E,"STEER: subagent steer = default / no_nudges / counter_steer. Priority: env > per-model clientData slot > GrowthBook > model floor (Opus 5 bundle gives ""no_nudges""). counter_steer injects ""## Delegating to subagents"" and logs tengu_subagent_steer_applied. Yours is ""default""."
+tengu_thrifty_sonic,true,E,"STEER: ""bash-first"" session assignment per model (cohort; model capability ""thrifty_sonic"")."
+tengu_ticklish_whisper,true,E,Permission dialogs handled through a separate request path (CLAUDE_CODE_TICKLISH_WHISPER).
+tengu_tidy_lemon,null,E,Copy for the extra-usage purchase dialog.
+tengu_tidy_origami,false,I,Compaction query-source tweak.
+tengu_toasty_breeze,"{enabled,...}",E,/low-priority: keep going at lower priority on your weekly limit.
+tengu_tool_cgroup_exclude_classes,{},E,Tool classes excluded from the memory cgroup.
+tengu_tool_memory_cgroup,false,E,Run tools in a memory-limited cgroup (Linux).
+tengu_tool_pear,false,I,Adds a first-party capability beta header for some models.
+tengu_tool_search_unsupported_models,[old models],E,Models that can't use tool search (deferred tools).
+tengu_trace_lantern,false,E,Detailed beta tracing.
+tengu_tranquil_crescent,false,I,Served-true check feature.
+tengu_turtle_carbon,true,E,"""ultrathink"" keyword triggers high effort."
+tengu_tussock_oriole,false,E,Team artifacts (unseen teammate artifacts notice).
+tengu_twinkling_globe,false,I,Served-true check feature.
+tengu_twinkly_prism,false,I,Plugin MCP server handling.
+tengu_typed_koala,true,E,Memory store delete safeguards.
+tengu_ultraplan_config,{enabled:false},E,Ultraplan (cloud planning on the web).
+tengu_ultraplan_prompt_identifier,"""visual_plan""",E,Which ultraplan prompt: simple_plan / visual_plan / three_subagents_with_critique.
+tengu_ultraplan_timeout_seconds,5400,E,Ultraplan timeout (90 min).
+tengu_ultrareview_awareness,"{slash_menu,...}",E,"Ultrareview nudges (slash menu, prose pointer, post-commit, startup tip). You're v1."
+tengu_umber_kestrel,true,E,EndConversation tool.
+tengu_umber_petrel,false,E,Remote memory for allowed repos.
+tengu_umber_sluice,true,E,Auto mode: artifact consent rule.
+tengu_umber_stile,true,E,Artifact DB str_replace editing.
+tengu_usage_overage_included_models,"[Fable, Fable 5, Fable 5.1]",E,Models whose usage is included in overage.
+tengu_valiant_rain,true,E,Remote tools: jump the queue.
+tengu_validated_clover,false,I,Served-true check feature.
+tengu_vast_tulip,true,E,Tool host attestation: enforce (vs observe).
+tengu_vellum_anchor,false,E,"Channel (Slack) limits message: ""an org owner or channel manager can raise it""."
+tengu_vellum_siding,false,I,VS Code gate passed through to the extension.
+tengu_velvet_harbor_owl,"""off""",E,"Claude Enterprise upsell (""Get more out of Claude Code on Claude Enterprise"")."
+tengu_velvet_ibis,{},E,Per-tool result size caps before truncation.
+tengu_velvet_moth,0.05,E,Memory survey rate.
+tengu_velvet_panda,true,I,Agent lineage tracking.
+tengu_velvet_tide,false,E,"Forces the ""simple system prompt"" (otherwise chosen per model capability)."
+tengu_velvety_ripple,false,I,Cross-session message classification variant.
+tengu_version_config,{minVersion:1.0.24},E,Minimum supported CC version.
+tengu_violin_amati,true,E,Remote tools project (serve this machine's tools to cloud sessions): core gate.
+tengu_violin_bridgepin,true,E,Remote tools: sub-gate.
+tengu_violin_chinrest,true,E,"Remote tools: hooks from this machine in cloud sessions (""run /hooks to decide"")."
+tengu_violin_corner,true,E,Remote tools: sub-gate.
+tengu_violin_eye,true,E,Remote tools: protected paths (~/.ssh etc.).
+tengu_violin_ferrule,true,E,Remote tools: env var handling.
+tengu_violin_fhole,true,E,Remote tools: joined call handling.
+tengu_violin_fingerboard,true,E,Remote tools: send your prompt from this machine at launch.
+tengu_violin_fret,true,E,Remote tools: sub-gate.
+tengu_violin_hair,true,E,Remote tools: sub-gate.
+tengu_violin_heel,true,E,Remote tools: sub-gate (realpath checks).
+tengu_violin_lining,true,E,"Remote tools: auto-off notices, pin cwd, scrub credential env."
+tengu_violin_maple,false,E,Remote tools: alternate gate.
+tengu_violin_mute,false,E,Remote tools: mute served tools.
+tengu_violin_neck,true,E,Remote tools: sub-gate.
+tengu_violin_nut,true,E,Remote tools: approval attestation / host-decided mode.
+tengu_violin_peg,true,E,Remote tools: file operations on this machine.
+tengu_violin_purfling,true,E,Remote tools: auto-arm served tools.
+tengu_violin_rib,true,E,Remote tools: sub-gate.
+tengu_violin_rosin,false,E,"PROMPT: coordinator/worker skill guidance (""Workers have access to MCP tools from..."")."
+tengu_violin_saddle,true,E,Remote tools: sub-gate.
+tengu_violin_scroll,true,E,Remote tools: MCP client reinitialization.
+tengu_violin_speculative_classifier,false,E,Remote tools: speculative permission classifier.
+tengu_violin_spruce,{askWaitMs:1800000},E,Remote tools: how long to wait on a permission ask (30 min).
+tengu_violin_strad,true,E,Remote tools: sub-gate.
+tengu_violin_table,true,E,Remote tools: permission suggestions.
+tengu_violin_tailgut,true,E,Remote tools: sub-gate.
+tengu_violin_tailpiece,true,E,Remote tools: session channel.
+tengu_violin_varnish,true,E,Remote tools: sub-gate.
+tengu_violin_volute,false,E,Remote tools: resume handshake.
+tengu_violin_waist,true,E,"Remote tools: path safety checks (DOS devices, ""..."" segments)."
+tengu_violin_wood,false,E,Remote tools: master gate (off for you).
+tengu_virtual_knuth,false,I,Hook-approved tool use in auto mode.
+tengu_virtual_pancake,true,I,Wildcard model matching for per-model rules.
+tengu_vscode_feedback_survey,true,E,VS Code feedback survey.
+tengu_vscode_onboarding,true,E,VS Code onboarding.
+tengu_vscode_review_upsell,false,E,VS Code review upsell.
+tengu_watchdog_skip_nonstreaming_fallback,false,E,"On stream idle timeout, skip the non-streaming retry."
+tengu_webfetch_deadline_ms,300000,E,WebFetch deadline (5 min).
+tengu_whimsical_elephant,false,I,Random-token feature (CLAUDE_CODE_WHIMSICAL_ELEPHANT).
+tengu_wild_tome,true,E,Forked agents share the parent's cache when the setup matches.
+tengu_willow_tern,false,E,"STEER: ""willow_tern"" prompt section, also delivered through the per-model clientData slot (bash-steer group with gorse_plover/cozy_teapot)."
+tengu_wise_bear_copy,{note_session...},E,"Limit-reset notes (""Use your limit reset... clau.de/reset"")."
+tengu_wise_comet,false,E,Strip thinking blocks for adaptive-thinking models.
+tengu_wondrous_acorn,"{enabled:true,min_continues:3}",E,Recreate dropped threads after 3 continues.
+tengu_workflows_enabled,true,E,Workflows feature.
+tengu_woven_harbor,false,I,Bridge revision / GitHub PR mode handling.
+tengu_xterm_atlas_reset,true,E,Auto-reset the terminal glyph atlas.
+tengu_zany_pike,"""off""",E,"Microcompaction: clear old tool results after ~65 min idle, keep last 5."
+tengu_zinc_harbor,false,I,Web-fetch agent type handling.
+tengu_zippy_gosling,0,I,Interval for some periodic timer (0 = off).
