@@ -31,9 +31,4 @@ Built on 2026-11-09 from the installed `claude.exe` (Windows, npm install) and o
 - **`tengu_hushed_lark` / `tengu_hushed_lark_text`:** the "user hasn't heard from you in a while" reminder, which fires after 5 silent turns. Its text is served from the server.
 - **`tengu_amber_tally`:** the usage meter's exchange rates, i.e. 5-hour credits per plan and credits per million tokens per model.
 
-## Caveats
-
-- This covers one binary, one OS, and one account's values. Minified code, so names like `R()` are the bundler's, not Anthropic's.
-- `I` rows are guesses. If you know better, open an issue.
-- Thinking is redacted by default in transcripts (`showThinkingSummaries` only gets you summaries back), so nothing here comes from thinking content.
-- No personal data. The table holds flag names, served values, and descriptions only.
+*The table holds flag names, served values, and descriptions only.*
